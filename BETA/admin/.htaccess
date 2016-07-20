@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "admin"
+AuthUserFile "/home3/bealestr/.htpasswds/public_html/mappedinsf/beta/passwd"
+require valid-user

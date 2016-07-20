@@ -1,0 +1,19 @@
+<?php
+require_once '../_php/db.php';
+
+$company = $_GET['id'];
+
+mysqli_query($con, "UPDATE bathrooms
+        SET published='1'
+        WHERE id='$bathroom'");
+mysql_close($con);
+
+if(mysql_errno()){
+    echo "MySQL error ".mysql_errno().": "
+         .mysql_error()."\n<br>When executing <br>\n$query\n<br>";
+} else {
+	echo 'sucess';
+	echo $_GET['id'];
+}
+
+?>
