@@ -475,6 +475,8 @@ function showDetails(id) {
 	}
 
 
+	/*
+
 	if($("#v"+id).data("hoursOpen") != "") {
 		$("#venue-hoursOpen").html($("#v"+id).data("hoursOpen")).show();
 	} else {
@@ -493,6 +495,7 @@ function showDetails(id) {
 		$("#venue-meta-wrap").removeClass("venue-hiring-detail");
 	}
 
+	*/
 
 	if($("#v"+id).data("whysf") != "") {
 		$("#why-sf-body").html($("#v"+id).data("whysf"));
