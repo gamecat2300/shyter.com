@@ -588,7 +588,7 @@ function doSearch(c_id, val) {
 		$("#venue-list ul").load("_php/get_bathrooms.php", {id : c_id, s: val}, function(){
 			$("#loader").hide();
 			clearMarkers();
-		    //$("#venue-list").find("ul").html(data);
+		    $("#venue-list").find("ul").html(data);
 
 
 		    $("#venue-list ul").fadeIn("fast", function(){
