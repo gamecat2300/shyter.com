@@ -32,25 +32,25 @@
 [02-Aug-2014 19:45:29 America/Denver] PHP Fatal error:  require_once(): Failed opening required '../db.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 2
 [02-Aug-2014 19:47:07 America/Denver] PHP Warning:  require_once(../db.php): failed to open stream: No such file or directory in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 2
 [02-Aug-2014 19:47:07 America/Denver] PHP Fatal error:  require_once(): Failed opening required '../db.php' (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 2
-[02-Aug-2014 19:47:32 America/Denver] PHP Notice:  Undefined variable: companies in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
+[02-Aug-2014 19:47:32 America/Denver] PHP Notice:  Undefined variable: bathrooms in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:47:32 America/Denver] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 5
-[02-Aug-2014 19:47:35 America/Denver] PHP Notice:  Undefined variable: companies in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
+[02-Aug-2014 19:47:35 America/Denver] PHP Notice:  Undefined variable: bathrooms in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:47:35 America/Denver] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 5
-[02-Aug-2014 19:47:36 America/Denver] PHP Notice:  Undefined variable: companies in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
+[02-Aug-2014 19:47:36 America/Denver] PHP Notice:  Undefined variable: bathrooms in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:47:36 America/Denver] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 5
-[02-Aug-2014 19:48:37 America/Denver] PHP Notice:  Undefined variable: companies in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
+[02-Aug-2014 19:48:37 America/Denver] PHP Notice:  Undefined variable: bathrooms in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:48:37 America/Denver] PHP Notice:  Undefined variable: id in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:48:37 America/Denver] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 5
-[02-Aug-2014 19:48:41 America/Denver] PHP Notice:  Undefined variable: companies in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
+[02-Aug-2014 19:48:41 America/Denver] PHP Notice:  Undefined variable: bathrooms in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:48:41 America/Denver] PHP Notice:  Undefined variable: id in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:48:41 America/Denver] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 5
-[02-Aug-2014 19:48:43 America/Denver] PHP Notice:  Undefined variable: companies in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
+[02-Aug-2014 19:48:43 America/Denver] PHP Notice:  Undefined variable: bathrooms in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:48:43 America/Denver] PHP Notice:  Undefined variable: id in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:48:43 America/Denver] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 5
-[02-Aug-2014 19:49:25 America/Denver] PHP Notice:  Undefined variable: companies in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
+[02-Aug-2014 19:49:25 America/Denver] PHP Notice:  Undefined variable: bathrooms in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:49:25 America/Denver] PHP Notice:  Undefined variable: id in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:49:25 America/Denver] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 5
-[02-Aug-2014 19:49:26 America/Denver] PHP Notice:  Undefined variable: companies in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
+[02-Aug-2014 19:49:26 America/Denver] PHP Notice:  Undefined variable: bathrooms in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:49:26 America/Denver] PHP Notice:  Undefined variable: id in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 4
 [02-Aug-2014 19:49:26 America/Denver] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 5
 [02-Aug-2014 19:51:50 America/Denver] PHP Notice:  Undefined variable: id in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 6
@@ -182,7 +182,7 @@
 [02-Aug-2014 22:11:09 America/Denver] PHP Warning:  mysql_close() expects parameter 1 to be resource, object given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 9
 [02-Aug-2014 22:14:49 America/Denver] PHP Warning:  mysql_close() expects parameter 1 to be resource, object given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 13
 [02-Aug-2014 22:27:20 America/Denver] PHP Warning:  mysql_close() expects parameter 1 to be resource, object given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 13
-[02-Aug-2014 22:28:09 America/Denver] PHP Notice:  Undefined variable: company in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 8
+[02-Aug-2014 22:28:09 America/Denver] PHP Notice:  Undefined variable: bathroom in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 8
 [02-Aug-2014 22:28:09 America/Denver] PHP Warning:  mysql_close() expects parameter 1 to be resource, object given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 9
 [02-Aug-2014 22:28:26 America/Denver] PHP Warning:  mysql_close() expects parameter 1 to be resource, object given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 9
 [02-Aug-2014 22:29:55 America/Denver] PHP Warning:  mysql_close() expects parameter 1 to be resource, object given in /home3/bealestr/public_html/mappedinsf/beta/admin/unpublish.php on line 9
@@ -288,7 +288,7 @@
 [04-Aug-2014 00:41:35 America/Denver] PHP Notice:  Undefined index: date in /home3/bealestr/public_html/mappedinsf/beta/admin/index.php on line 136
 [04-Aug-2014 00:42:20 America/Denver] PHP Notice:  Undefined index: date in /home3/bealestr/public_html/mappedinsf/beta/admin/index.php on line 136
 [04-Aug-2014 00:43:31 America/Denver] PHP Notice:  Undefined index: date in /home3/bealestr/public_html/mappedinsf/beta/admin/index.php on line 136
-[04-Aug-2014 00:44:04 America/Denver] PHP Fatal error:  Call to undefined function getAllCompanies() in /home3/bealestr/public_html/mappedinsf/beta/admin/index.php on line 28
+[04-Aug-2014 00:44:04 America/Denver] PHP Fatal error:  Call to undefined function getAllbathrooms() in /home3/bealestr/public_html/mappedinsf/beta/admin/index.php on line 28
 [04-Aug-2014 23:34:09 America/Denver] PHP Warning:  mysql_close() expects parameter 1 to be resource, object given in /home3/bealestr/public_html/mappedinsf/beta/admin/unpublish.php on line 9
 [04-Aug-2014 23:39:27 America/Denver] PHP Warning:  mysql_close() expects parameter 1 to be resource, object given in /home3/bealestr/public_html/mappedinsf/beta/admin/publish.php on line 9
 [05-Aug-2014 19:44:31 America/Denver] PHP Parse error:  syntax error, unexpected '?' in /home3/bealestr/public_html/mappedinsf/beta/admin/index.php on line 23

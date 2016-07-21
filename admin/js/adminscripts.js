@@ -1,13 +1,13 @@
 
 
 $(".publish").click(function() {
-company = ($(this).val());
+bathroom = ($(this).val());
 $.ajax( {
-            url : "publish.php?do=update&id="+company,
+            url : "publish.php?do=update&id="+bathroom,
             type : "GET",
             success : function(data) {
-            	$(".publishThis"+company).html("Unpublish");
-                //alert ("published"+company); //or use data string to show something else
+            	$(".publishThis"+bathroom).html("Unpublish");
+                //alert ("published"+bathroom); //or use data string to show something else
                 }
             });
 });
@@ -15,26 +15,26 @@ $.ajax( {
 
 
 $(".unpublish").click(function() {
-company = ($(this).val());
+bathroom = ($(this).val());
 $.ajax( {
-            url : "unpublish.php?do=update&id="+company,
+            url : "unpublish.php?do=update&id="+bathroom,
             type : "GET",
             success : function(data) {
-            	$(".publishThis"+company).html("Publish");
-               // alert ("unpublished"+company); //or use data string to show something else
+            	$(".publishThis"+bathroom).html("Publish");
+               // alert ("unpublished"+bathroom); //or use data string to show something else
                 }
             });
 });
 
 $(".delete").click(function() {
-company = ($(this).val());
+bathroom = ($(this).val());
 if (confirm("Are you sure you want to delete")) {
     $.ajax( {
-    		url : "delete.php?id="+company,
+    		url : "delete.php?id="+bathroom,
             type : "POST",
             success : function(data) {
-            	$('#company'+company).hide();
-               // alert ("unpublished"+company); //or use data string to show something else
+            	$('#bathroom'+bathroom).hide();
+               // alert ("unpublished"+bathroom); //or use data string to show something else
                 }
             });
   }

@@ -1,9 +1,9 @@
 <?php
-$conn = new mysqli("mysql.shyter.com","shubbard","njoi2323","shyter");
+$conn = new mysqli("localhost","root","root","shyter");
 
-$sql = "INSERT INTO bathrooms (name, type, street_address, street_address2, city, hours, contact_email,contact_name,phone, why_sf, is_hiring, lat, lng, rating, date)
+$sql = "INSERT INTO bathrooms (name, type, street_address, city, hoursOpen, hoursClosed, contact_email, contact_name, phone, why_sf, is_hiring, lat, lng, date, rating)
 VALUES
-('$_POST[name]','$_POST[type]','$_POST[street_address]','$_POST[street_address2]','$_POST[city]','$_POST[hours]','$_POST[contact_email]','$_POST[contact_name]','$_POST[phone]','$_POST[why_sf]','$_POST[is_hiring]','$_POST[latitude]','$_POST[longitude]','$_POST[rating]','$_POST[date]')";
+('$_POST[name]','$_POST[type]','$_POST[street_address]','$_POST[city]','$_POST[hoursOpen]','$_POST[hoursClosed]','$_POST[contact_email]','$_POST[contact_name]','$_POST[phone]','$_POST[why_sf]','$_POST[is_hiring]','$_POST[latitude]','$_POST[longitude]','$_POST[date]','$_POST[rating]')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";

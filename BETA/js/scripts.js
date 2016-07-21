@@ -441,8 +441,9 @@ function showDetails(id) {
                       '<div class="iw-subTitle">Address: '+$("#v"+id).data("address") +'</div>' +
                       '<div class="rateit" data-rateit-value='+$("#v"+id).data("rating") +' data-rateit-ispreset="true" data-rateit-readonly="true"></div>' +
                       '<p>'+ $("#v"+id).data("whysf")+'</p>' +
-                      '<div class="iw-subTitle">Hours</div>' +
-                      '<p>'+$("#v"+id).data("hours") +'</p>'+
+                    '<div class="iw-subTitle">Hours</div>' +
+                      '<p>'+$("#v"+id).data("hoursOpen") +'</p>'+
+                      '<p>'+$("#v"+id).data("hoursClosed") +'</p>'+
                     '</div>' +
                     '<div class="iw-bottom-gradient"></div>' +
                   '</div>';
@@ -474,10 +475,16 @@ function showDetails(id) {
 	}
 
 
-	if($("#v"+id).data("hours") != "") {
-		$("#venue-hours").html($("#v"+id).data("hours")).show();
+	if($("#v"+id).data("hoursOpen") != "") {
+		$("#venue-hoursOpen").html($("#v"+id).data("hoursOpen")).show();
 	} else {
-		$("#venue-hours").hide();
+		$("#venue-hoursOpen").hide();
+	}
+
+	if($("#v"+id).data("hoursClosed") != "") {
+		$("#venue-hoursClosed").html($("#v"+id).data("hoursClosed")).show();
+	} else {
+		$("#venue-hoursClosed").hide();
 	}
 
 	if($("#v"+id).data("hiring") != 0) {
@@ -697,7 +704,8 @@ function processForm() {
 	  	data: {
 	  		name: $("#name").val(),
 			street_address: $("#street_address").val(),
-			hours: $("#hours").val(),
+			hoursOpen: $("#hoursOpen").val(),
+			hoursClosed: $("#hoursClosed").val(),
 			latitude: user_lat,
 			longitude: user_long,
 			city: $("#city option:selected").val(),

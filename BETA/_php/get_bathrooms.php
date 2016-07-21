@@ -25,7 +25,8 @@
 			$result .= " data-address='".$bathroom['street_address']."' ";
 			$result .= " data-lat='".$bathroom['lat']."' ";
 			$result .= " data-long='".$bathroom['lng']."' ";
-			$result .= " data-hours='".$bathroom['hours']."' ";
+			$result .= " data-hoursOpen='".$bathroom['hoursOpen']."' ";
+			$result .= " data-hoursClosed='".$bathroom['hoursClosed']."' ";
 			$result .= " data-hiring='".$bathroom['is_hiring']."' ";
 			$result .= " data-whysf='".$bathroom['why_sf']."' ";
 			$result .= " data-category='".$bathroom['type']."' >";

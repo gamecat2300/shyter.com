@@ -87,7 +87,7 @@ $(document).ready(function(){
 
 	$("#btn-add").bind("click tapstart", function(e){
 		gotoSlide(1);
-		$('#add-company').lightbox_me({
+		$('#add-bathroom').lightbox_me({
         	centered: true
         });
     	e.preventDefault();
@@ -118,9 +118,9 @@ $(document).ready(function(){
 	});
 
 	$("#find-it").bind("click tapstart", function(){
-		if($("#bathroom_name").val() == "") {
+		if($("#name").val() == "") {
 			alert("You have to enter a bathroom name");
-			$("#bathroom_name").focus();
+			$("#name").focus();
 		} else {
 			getAddressOnMap();
 		}
@@ -137,7 +137,7 @@ $(document).ready(function(){
 		$(this).addClass("section-selected");
 		infowindow.close();
 		currentCategory = id;
-		getCompanies(id);
+		getbathrooms(id);
 	});
 
 
@@ -146,7 +146,7 @@ $(document).ready(function(){
 		    doSearch(currentCategory, $(this).val());
 	    } else {
 	    	if(e.keyCode == 8 || e.keyCode == 46) {
-		    	getCompanies(currentCategory);
+		    	getbathrooms(currentCategory);
 	    	}
 	    }
     });
@@ -288,7 +288,7 @@ function drop() {
 	        var n = "";
 
 			for (var i = 0; i < m.length; i++ ){
-				n += '<li class="'+getCategoryClass($("#v"+m[i].id).data("category"))+'"><a href="#" onclick="openCompanyInfo('+m[i].id+'); return false;">'+$("#v"+m[i].id).data("name")+'</a></li>';
+				n += '<li class="'+getCategoryClass($("#v"+m[i].id).data("category"))+'"><a href="#" onclick="openbathroomInfo('+m[i].id+'); return false;">'+$("#v"+m[i].id).data("name")+'</a></li>';
 	        }
 
 	     	openMyInfoWindow(myLatlng, m.length, n);
@@ -303,7 +303,7 @@ function drop() {
 }
 
 
-function openCompanyInfo(id) {
+function openbathroomInfo(id) {
 	findMarker(id, true);
 }
 
@@ -460,7 +460,7 @@ function showDetails(id) {
 		map.setZoom(17);
 	}
 
-	$("#venue-name").html($("#v"+id).data("bathroom_name"));
+	$("#venue-name").html($("#v"+id).data("name"));
 	if($("#v"+id).data("venueimg") == "") {
 		$("#venue-img").html("");
 	} else {
@@ -544,11 +544,11 @@ function findMarker(id, d) {
 	}
 }
 
-function getCompanies(c_id) {
+function getbathrooms(c_id) {
 	clearMarkers();
 
 
-	//$("#cluster-explain").hide();
+	$("#cluster-explain").hide();
 	$("#venue-list ul").fadeOut("fast", function(){
 		$("#loader").show();
 
@@ -607,17 +607,17 @@ function gotoSlide(n) {
 	}
 	switch(n) {
 		case 1:
-			$("#company-slides").css({marginLeft: 0});
+			$("#bathroom-slides").css({marginLeft: 0});
 		break;
 		case 2:
-			$("#company-slides").animate({marginLeft: -slideWidth}, 500);
+			$("#bathroom-slides").animate({marginLeft: -slideWidth}, 500);
 			initialize_info();
 		break;
 		case 3:
-			$("#company-slides").animate({marginLeft: -slideWidth*2}, 500);
+			$("#bathroom-slides").animate({marginLeft: -slideWidth*2}, 500);
 		break;
 		case 4:
-			$("#company-slides").animate({marginLeft: -slideWidth*3}, 500);
+			$("#bathroom-slides").animate({marginLeft: -slideWidth*3}, 500);
 		break;
 	}
 }
@@ -689,13 +689,13 @@ function processForm() {
 	gotoSlide(4);
 
 	var ct = $("input[@name=category_group]:checked").attr('value');
-
+	var ratings = $("input[@name=ratings]:checked").attr('value');
 
 	$.ajax({
 		type: 'POST',
 	  	url: '_php/save_bathroom.php',
 	  	data: {
-	  		bathroom_name: $("#bathroom_name").val(),
+	  		name: $("#name").val(),
 			street_address: $("#street_address").val(),
 			hours: $("#hours").val(),
 			latitude: user_lat,
@@ -707,13 +707,13 @@ function processForm() {
 			is_hiring: isHiring,
 			why_sf: $("textarea#why_sf").val(),
 			date: $("#date").val(),
-			rating: (2),
+			rating: ratings,
 			type: ct
 		},
 		success: function(data){
 			$("#saving").hide();
 			$("#results").fadeIn(500);
-			setTimeout(function(){$('#add-company').trigger('close');},5000);
+			setTimeout(function(){$('#add-bathroom').trigger('close');},5000);
 		},
 	});
 }

@@ -1,11 +1,11 @@
 <?php
 require_once '../_php/db.php';
 
-$company = $_GET['id'];
+$bathroom = $_GET['id'];
 
-mysqli_query($con, "UPDATE companies
+mysqli_query($con, "UPDATE bathrooms
         SET published='0'
-        WHERE id='$company'");
+        WHERE id='$bathroom'");
 mysql_close($con);
 
 if(mysql_errno()){

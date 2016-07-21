@@ -56,7 +56,9 @@ $bathroomList = getHiringBathrooms();
 							<div id="venue-rating" class="rating"></div>
 							<div id="why-sf">
 								<div id="rating"></div>
-								<div id="venue-hours"></div>
+								<div id="venue-hoursOpen"></div>
+								<div id="venue-hoursClosed"></div>
+								<br style="clear:both">
 								<div id="why-sf-title">How to get into the bathroom:</div>
 								<div id="why-sf-body"></div>
 							</div>
@@ -89,10 +91,11 @@ $bathroomList = getHiringBathrooms();
 						if($list){
 							foreach($list as $bathroom){
 						?>
-							<li id="v<?php echo $bathroom['id']; ?>" data-vid="<?php echo $bathroom['id']; ?>" data-name="<?php echo $bathroom['name']; ?>" data-hours="<?php echo $bathroom['hours']; ?>" data-address="<?php echo $bathroom['street_address']; ?>" data-lat="<?php echo $bathroom['lat']; ?>" data-long="<?php echo $bathroom['lng']; ?>" data-url="<?php echo $bathroom['url']; ?>" data-hiring="<?php echo $bathroom['is_hiring']; ?>" data-whysf="<?php echo $bathroom['why_sf']; ?>" data-type="<?php echo $bathroom['type']; ?>" data-rating="<?php echo $bathroom['rating']; ?>">
+							<li id="v<?php echo $bathroom['id']; ?>" data-vid="<?php echo $bathroom['id']; ?>" data-name="<?php echo $bathroom['name']; ?>" data-hoursOpen="<?php echo $bathroom['hoursOpen']; ?>" data-hoursClosed="<?php echo $bathroom['hoursClosed']; ?>" data-address="<?php echo $bathroom['street_address']; ?>" data-lat="<?php echo $bathroom['lat']; ?>" data-long="<?php echo $bathroom['lng']; ?>" data-url="<?php echo $bathroom['url']; ?>" data-hiring="<?php echo $bathroom['is_hiring']; ?>" data-whysf="<?php echo $bathroom['why_sf']; ?>" data-type="<?php echo $bathroom['type']; ?>" data-rating="<?php echo $bathroom['rating']; ?>">
 								<a href="#" class="list-<?php echo $bathroom['type']; ?>">
 									<span class="venue-name"><?php echo $bathroom['name']; ?></span><br />
-									<span class="venue-hours"><?php echo $bathroom['hours']; ?></span><br />
+									<span class="venue-hoursOpen"><?php echo $bathroom['hoursOpen']; ?> -</span>									
+									<span class="venue-hoursClosed"><?php echo $bathroom['hoursClosed']; ?></span>
 									<span class="venue-type"><?php echo $bathroom['bathroom_type']; ?></span><br />
 									<span class="venue-address"><?php echo $bathroom['street_address']; ?></span><br />
 									<div class="rateit" data-rateit-value="<?php echo $bathroom['rating']; ?>" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
@@ -151,8 +154,61 @@ $bathroomList = getHiringBathrooms();
 					</fieldset>
 
 					<fieldset>
-						<label for="bathroom_hours">Bathroom Hours:</label>
-						<input type="text" id="hours" name="hours" />
+						<label for="bathroom_hours">Bathroom Hours (Open - Close):</label>
+						<br />
+						<div class="hours">
+						<select name="hoursOpen" id="hoursOpen">
+							<option value="1am">1am</option>
+							<option value="2am">2am</option>
+							<option value="3am">3am</option>
+							<option value="4am">4am</option>
+							<option value="5am">5am</option>
+							<option value="6am">6am</option>
+							<option value="7am">7am</option>
+							<option value="8am">8am</option>
+							<option value="9am">9am</option>
+							<option value="10am">10am</option>
+							<option value="11am">11am</option>
+							<option value="12pm">12pm</option>
+							<option value="1pm">1pm</option>
+							<option value="2pm">2pm</option>
+							<option value="3pm">3pm</option>
+							<option value="4pm">4pm</option>
+							<option value="5pm">5pm</option>
+							<option value="6pm">6pm</option>
+							<option value="7pm">7pm</option>
+							<option value="8pm">8pm</option>
+							<option value="9pm">9pm</option>
+							<option value="10pm">10pm</option>
+							<option value="11pm">11pm</option>
+						</select>
+						
+						<select name="hoursClosed" id="hoursClosed">
+							<option value="1am">1am</option>
+							<option value="2am">2am</option>
+							<option value="3am">3am</option>
+							<option value="4am">4am</option>
+							<option value="5am">5am</option>
+							<option value="6am">6am</option>
+							<option value="7am">7am</option>
+							<option value="8am">8am</option>
+							<option value="9am">9am</option>
+							<option value="10am">10am</option>
+							<option value="11am">11am</option>
+							<option value="12pm">12pm</option>
+							<option value="1pm">1pm</option>
+							<option value="2pm">2pm</option>
+							<option value="3pm">3pm</option>
+							<option value="4pm">4pm</option>
+							<option value="5pm">5pm</option>
+							<option value="6pm">6pm</option>
+							<option value="7pm">7pm</option>
+							<option value="8pm">8pm</option>
+							<option value="9pm">9pm</option>
+							<option value="10pm">10pm</option>
+							<option value="11pm">11pm</option>
+						</select>
+					
 					</fieldset>
 
 					<!--fieldset>
@@ -194,12 +250,15 @@ $bathroomList = getHiringBathrooms();
 					<div class="info-left">
 						<fieldset>
 						<label for="ratings">Bathroom Rating (1-5): <span class="req">*</span></label>
-						<br>
-						<input type="radio" name="ratings" value="1">1<br>
-  						<input type="radio" name="ratings" value="2">2<br>
-  						<input type="radio" name="ratings" value="3">3<br>
-  						<input type="radio" name="ratings" value="4">4<br>
-  						<input type="radio" name="ratings" value="5">5
+						<br />
+						<select id="backing2c">
+    						<option value="1">Awful</option>
+    						<option value="2">Bad</option>
+    						<option value="3">OK</option>
+    						<option value="4">Great</option>
+    						<option value="5">Excellent</option>
+						</select>
+						<div class="rateit" data-rateit-backingfld="#backing2c" data-rateit-min="0"></div>
 					</fieldset>
 					</div>
 					<div class="info-right">

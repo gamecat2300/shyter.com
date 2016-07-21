@@ -1,10 +1,10 @@
 <?php
 require_once '../_php/db.php';
 
-$company = $_GET['id'];
+$bathroom = $_GET['id'];
 
-mysqli_query($con, "DELETE FROM companies
-        WHERE id='$company'");
+mysqli_query($con, "DELETE FROM bathrooms
+        WHERE id='$bathroom'");
 mysql_close($con);
 
 if(mysql_errno()){

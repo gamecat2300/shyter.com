@@ -1,7 +1,7 @@
 <?php
 require_once '../_php/db.php';
 
-$company = $_GET['id'];
+$bathroom = $_GET['id'];
 
 mysqli_query($con, "UPDATE bathrooms
         SET published='1'

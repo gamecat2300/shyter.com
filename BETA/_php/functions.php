@@ -32,7 +32,8 @@ function getbathrooms($type = -1, $is_hiring = -1, $search = ""){
 			$temp['street_address'] = $rows['street_address'];
 			$temp['street_address2'] = $rows['street_address2'];
 			$temp['city'] = $rows['city'];
-			$temp['hours'] = $rows['hours'];
+			$temp['hoursOpen'] = $rows['hoursOpen'];
+			$temp['hoursClosed'] = $rows['hoursClosed'];
 			$temp['contact_email'] = $rows['contact_email'];
 			$temp['why_sf'] = $rows['why_sf'];
 			$temp['bathrooms_url'] = $rows['bathrooms_url'];
@@ -80,7 +81,8 @@ function getAllbathrooms($type = -1, $is_hiring = -1, $search = ""){
 			$temp['street_address'] = $rows['street_address'];
 			$temp['street_address2'] = $rows['street_address2'];
 			$temp['city'] = $rows['city'];
-			$temp['hours'] = $rows['hours'];
+			$temp['hoursOpen'] = $rows['hoursOpen'];
+			$temp['hoursClosed'] = $rows['hoursClosed'];
 			$temp['contact_email'] = $rows['contact_email'];
 			$temp['contact_name'] = $rows['contact_name'];
 			$temp['phone'] = $rows['phone'];

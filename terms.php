@@ -97,7 +97,7 @@ Read the City of San Francsico's Social Media Policy by <a href="http://www6.sfg
 
 <p>What to do</p>
 <ul>
-<li>Use your compaSF's name. Shyter SF Digital Map is for identified companies or entities and listings should not be anoSFmous.</li>
+<li>Use your compaSF's name. Shyter SF Digital Map is for identified bathrooms or entities and listings should not be anoSFmous.</li>
 <li>Use your actual location. The Site is to foster awareness and create connections so use your actual business location. </li>
 <li>Include information on job openings.  We want to encourage local business development and encourage hiring so please include hiring information.</li>
 <li>Include a link to your website.  Shyter SF Digital Map wants to educate the eCommunity about resources and opportunities in the digital community, so include a link to your website.</li>

@@ -19,7 +19,7 @@ $bathroomList = getHiringBathrooms();
 	<meta name="author" content="Steven Hubbard - http://nationalflashback.com">
 	<meta name="keywords" content="bathrooms, San Francisco, bathrooms in San Francisco, toilets, bathrooms, bathroom map, search bathrooms, sf toilets, bathroom, water closet">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-	
+	<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyBO6ZWMzacg2RVGfrFF7bt0rWbASV91wgg"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="js/rateit.css">
@@ -89,9 +89,9 @@ $bathroomList = getHiringBathrooms();
 						if($list){
 							foreach($list as $bathroom){
 						?>
-							<li id="v<?php echo $bathroom['id']; ?>" data-vid="<?php echo $bathroom['id']; ?>" data-name="<?php echo $bathroom['bathroom_name']; ?>" data-hours="<?php echo $bathroom['hours']; ?>" data-address="<?php echo $bathroom['street_address']; ?>" data-lat="<?php echo $bathroom['lat']; ?>" data-long="<?php echo $bathroom['lng']; ?>" data-url="<?php echo $bathroom['url']; ?>" data-hiring="<?php echo $bathroom['is_hiring']; ?>" data-whysf="<?php echo $bathroom['why_sf']; ?>" data-type="<?php echo $bathroom['type']; ?>" data-rating="<?php echo $bathroom['rating']; ?>">
+							<li id="v<?php echo $bathroom['id']; ?>" data-vid="<?php echo $bathroom['id']; ?>" data-name="<?php echo $bathroom['name']; ?>" data-hours="<?php echo $bathroom['hours']; ?>" data-address="<?php echo $bathroom['street_address']; ?>" data-lat="<?php echo $bathroom['lat']; ?>" data-long="<?php echo $bathroom['lng']; ?>" data-url="<?php echo $bathroom['url']; ?>" data-hiring="<?php echo $bathroom['is_hiring']; ?>" data-whysf="<?php echo $bathroom['why_sf']; ?>" data-type="<?php echo $bathroom['type']; ?>" data-rating="<?php echo $bathroom['rating']; ?>">
 								<a href="#" class="list-<?php echo $bathroom['type']; ?>">
-									<span class="venue-name"><?php echo $bathroom['bathroom_name']; ?></span><br />
+									<span class="venue-name"><?php echo $bathroom['name']; ?></span><br />
 									<span class="venue-hours"><?php echo $bathroom['hours']; ?></span><br />
 									<span class="venue-type"><?php echo $bathroom['bathroom_type']; ?></span><br />
 									<span class="venue-address"><?php echo $bathroom['street_address']; ?></span><br />
@@ -120,9 +120,9 @@ $bathroomList = getHiringBathrooms();
 	<div class="fb-like" data-href="http://shyter.com" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" style="vertical-align:top;zoom:1;*display:inline;float:left"></div>
 	</div>
 </div>
-<div id="add-company">
-	<ul id="company-slides">
-		<li class="company-slide">
+<div id="add-bathroom">
+	<ul id="bathroom-slides">
+		<li class="bathroom-slide">
 			<div class="slidepad mapbg">
 				<h1 class="pad40">Add Your Bathroom To The Map</h1>
 				<p>The public bathroom sector in San Francisco is limiting to say the least, we want to help you find a bathroom ASAP.  If you know of a publicly available bathroom please post it now.</p>
@@ -140,14 +140,14 @@ $bathroomList = getHiringBathrooms();
 				</div>
 			</div>
 		</li>
-		<li class="company-slide">
+		<li class="bathroom-slide">
 			<div class="slidepad">
 				<h1>Where is the bathroom located?</h1>
 
 				<div class="info-left">
 					<fieldset>
 						<label for="name">Bathroom Name: <span class="req">*</span></label>
-						<input type="text" id="bathroom_name" name="bathroom_name" />
+						<input type="text" id="name" name="name" />
 					</fieldset>
 
 					<fieldset>
@@ -187,14 +187,19 @@ $bathroomList = getHiringBathrooms();
 				</div>
 			</div>
 		</li>
-		<li class="company-slide">
+		<li class="bathroom-slide">
 			<div class="slidepad">
 				<h1>Tell us about the bathroom</h1>
 				<div class="clearfix">
 					<div class="info-left">
 						<fieldset>
-						<label for="rating">Bathroom Rating (1-5): <span class="req">*</span></label>
-						<input type="text" id="rating" name="rating" />
+						<label for="ratings">Bathroom Rating (1-5): <span class="req">*</span></label>
+						<br>
+						<input type="radio" name="ratings" value="1">1<br>
+  						<input type="radio" name="ratings" value="2">2<br>
+  						<input type="radio" name="ratings" value="3">3<br>
+  						<input type="radio" name="ratings" value="4">4<br>
+  						<input type="radio" name="ratings" value="5">5
 					</fieldset>
 					</div>
 					<div class="info-right">
@@ -214,7 +219,7 @@ $bathroomList = getHiringBathrooms();
 				</div>
 			</div>
 		</li>
-		<li class="company-slide">
+		<li class="bathroom-slide">
 			<div class="slidepad">
 				<div id="saving">
 					<h1>Submitting...</h1>
@@ -244,7 +249,7 @@ $bathroomList = getHiringBathrooms();
 
 		<h2>How the Map Works</h2>
 
-		<p>To see a company, zoom in and click on an icon. When you see a colored circle with a number, it means that there are that many tech bathrooms located in that area. Clicking on the colored circles will zoom you in. Once you are zoomed in, click on the colored circle icon to view a full list of bathrooms at that location. </p>
+		<p>To see a bathroom, zoom in and click on an icon. When you see a colored circle with a number, it means that there are that many tech bathrooms located in that area. Clicking on the colored circles will zoom you in. Once you are zoomed in, click on the colored circle icon to view a full list of bathrooms at that location. </p>
 
 		<p>Data sources for the interactive Shyter SF Digital Map include SF Digital, San Francisco City Economic Development Corporation, Internet Week San Francisco, <a href="http://www.meetup.com/sfnewtech/">San Francisco Tech Meetup</a> and user-generated submissions.</p>	</div>
 </div>
@@ -256,9 +261,6 @@ $bathroomList = getHiringBathrooms();
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=138465543001130&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
-
-<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyBO6ZWMzacg2RVGfrFF7bt0rWbASV91wgg"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 <script src="js/jquery.rateit.min.js"></script>

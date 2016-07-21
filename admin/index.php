@@ -18,8 +18,8 @@ ob_start("sanitize_output");
 <?php
 require_once '../_php/db.php';
 require_once '../_php/functions.php';
-$list = getAllCompanies();
-$hiringList = getHiringCompanies();
+$list = getAllbathrooms();
+$hiringList = getHiringbathrooms();
 ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -62,10 +62,10 @@ $hiringList = getHiringCompanies();
 					<thead>
 					<tr>
 						<th>
-						Company name
+						bathroom name
 						</th>
 						<th>
-						Company Address
+						bathroom Address
 						</th>
 						<th>
 						Web Site
@@ -95,29 +95,29 @@ $hiringList = getHiringCompanies();
 					</thead>
 					<?php
 						if($list){
-							foreach($list as $company){
+							foreach($list as $bathroom){
 					?>
-					<tr id="company<?php echo $company['id'];?>">
+					<tr id="bathroom<?php echo $bathroom['id'];?>">
 						<td>
-							<?php echo $company['name']; ?>
+							<?php echo $bathroom['name']; ?>
 						</td>
 						<td>
-							<a href=" http://maps.google.com/maps?daddr={<?php echo $company['street_address']; ?>, san francisco, ca} " target="_blank"><?php echo $company['street_address']; ?></a>
+							<a href=" http://maps.google.com/maps?daddr={<?php echo $bathroom['street_address']; ?>, san francisco, ca} " target="_blank"><?php echo $bathroom['street_address']; ?></a>
 						</td>
 						<td>
-							<a href="<?php echo $company['url']; ?>" target="_blank"><?php echo $company['url']; ?></a>
+							<a href="<?php echo $bathroom['url']; ?>" target="_blank"><?php echo $bathroom['url']; ?></a>
 						</td>
 						<td>
-							<a href="mailto:<?php echo $company['contact_email']; ?>"><?php echo $company['contact_email']; ?></a>
+							<a href="mailto:<?php echo $bathroom['contact_email']; ?>"><?php echo $bathroom['contact_email']; ?></a>
 						</td>
 						<td>
-							<?php echo $company['contact_name']; ?>
+							<?php echo $bathroom['contact_name']; ?>
 						</td>
 						<td>
-							<?php echo $company['phone']; ?>
+							<?php echo $bathroom['phone']; ?>
 						</td>
 						<td>
-							<?php if ($company['is_hiring'] == '1'){
+							<?php if ($bathroom['is_hiring'] == '1'){
 								echo 'Yes';
 								} else {
 								echo 'No';
@@ -125,21 +125,21 @@ $hiringList = getHiringCompanies();
 							?>
 						</td>
 						<td>
-							<?php if ($company['published'] == '1') { ?>
-								<input type="checkbox" class="unpublish" name="company" value="<?php echo $company['id']; ?>" style="width:20px" checked> <span class="publishThis<?php echo $company['id']; ?>">Unpublish</span>
+							<?php if ($bathroom['published'] == '1') { ?>
+								<input type="checkbox" class="unpublish" name="bathroom" value="<?php echo $bathroom['id']; ?>" style="width:20px" checked> <span class="publishThis<?php echo $bathroom['id']; ?>">Unpublish</span>
 							<?php } else { ?>
-								<input type="checkbox" class="publish" name="company" value="<?php echo $company['id']; ?>" style="width:20px"> <span class="publishThis<?php echo $company['id']; ?>" >Publish</span>
+								<input type="checkbox" class="publish" name="bathroom" value="<?php echo $bathroom['id']; ?>" style="width:20px"> <span class="publishThis<?php echo $bathroom['id']; ?>" >Publish</span>
 								<?php } ?>
 						</td>
 						<td>
 							<?php
-								$source = $company['date'];
+								$source = $bathroom['date'];
 								$date = new DateTime($source);
 								echo $date->format('M-d-y'); // 07-17-12
 							?>
 						</td>
 						<td>
-							<button class="delete" value="<?php echo $company['id']; ?>">Delete</button>
+							<button class="delete" value="<?php echo $bathroom['id']; ?>">Delete</button>
 						</td>
 				</tr>
 				<?php
