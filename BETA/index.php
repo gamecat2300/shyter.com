@@ -54,14 +54,13 @@ $bathroomList = getHiringBathrooms();
 							<h1 id="venue-name" class="fn"></h1>
 							<div id="venue-address" class="street-address"></div>
 							<div id="venue-rating" class="rating"></div>
-							<div id="why-sf">
-								<div id="rating"></div>
-								<div id="venue-hoursOpen"></div>
-								<div id="venue-hoursClosed"></div>
-								<br style="clear:both">
-								<div id="why-sf-title">How to get into the bathroom:</div>
-								<div id="why-sf-body"></div>
-							</div>
+							<div id="why-sf"></div>
+							<div id="rating"></div>
+							<div id="venue-hoursOpen"></div>
+							<div id="venue-hoursClosed"></div>
+							<br style="clear:both">
+							<div id="why-sf-title">How to get into the bathroom:</div>
+							<div id="why-sf-body"></div>
 							<div id="edits">
 								Did you recommend this bathroom? Have edits? Email <a href="mailto:info@shyter.com">info@shyter.com</a>
 							</div>

@@ -462,6 +462,7 @@ function showDetails(id) {
 	}
 
 	$("#venue-name").html($("#v"+id).data("name"));
+
 	if($("#v"+id).data("venueimg") == "") {
 		$("#venue-img").html("");
 	} else {
@@ -475,19 +476,12 @@ function showDetails(id) {
 	}
 
 
-	/*
 
-	if($("#v"+id).data("hoursOpen") != "") {
-		$("#venue-hoursOpen").html($("#v"+id).data("hoursOpen")).show();
-	} else {
-		$("#venue-hoursOpen").hide();
-	}
+	$("#venue-hoursOpen").html($("#v"+id).data("hoursOpen"));
 
-	if($("#v"+id).data("hoursClosed") != "") {
-		$("#venue-hoursClosed").html($("#v"+id).data("hoursClosed")).show();
-	} else {
-		$("#venue-hoursClosed").hide();
-	}
+	$("#venue-hoursClosed").html($("#v"+id).data("hoursClosed"));
+
+
 
 	if($("#v"+id).data("hiring") != 0) {
 		$("#venue-meta-wrap").addClass("venue-hiring-detail");
@@ -495,7 +489,6 @@ function showDetails(id) {
 		$("#venue-meta-wrap").removeClass("venue-hiring-detail");
 	}
 
-	*/
 
 	if($("#v"+id).data("whysf") != "") {
 		$("#why-sf-body").html($("#v"+id).data("whysf"));
